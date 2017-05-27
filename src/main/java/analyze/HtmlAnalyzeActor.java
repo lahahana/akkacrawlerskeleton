@@ -35,7 +35,7 @@ public class HtmlAnalyzeActor extends UntypedActor {
         String crawlTaskId = crawlUrl.getCrawlTaskId();
 
         //get crawlTask from local cache， should get from remote cache in the future
-        CrawlTask crawlTask = Cache.crawlTaskMap.get(crawlTaskId);
+        CrawlTask crawlTask = null;
 
         CrawlRule crawlRule = crawlTask.getRule();
         Elements elements = doc.getAllElements();
